@@ -16,6 +16,9 @@
   <li>$objectVar = new stdClass; // object</li>
   <li>$nullVar = null; // NULL</li>
 </ul>
-
+<?php
+$intVar = 7;
+echo "Data Type $intVar";
+?>
 </body>
 </html>
