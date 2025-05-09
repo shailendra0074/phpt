@@ -43,33 +43,35 @@
     </div>
   </div>
 </nav>
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
-    $password = $_POST['pass'];
+    $password = $_POST['password'];
 
     echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <strong>Holy guacamole!</strong> You entered: ' . $email . ' / ' . $password . '
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
 }
 ?>
 
+
 <div class="container">
     <h2>Please Enter your Email and Password</h2>
-    <form action = "/cwhphp/get_post.php" method="post">
+<form action="/ssgphp/get_post.php" method="post">
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="pass" class="form-label">Password</label>
-    <input type="password" name="pass" class="form-control" id="pass">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password" required>
   </div>
- 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
   </body>
