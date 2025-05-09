@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <div class="container">
     <h2>Please Enter your Email and Password</h2>
-<form action="/ssgphp/get_post.php" method="post">
+<form action="/phpt/get_post.php" method="post">
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
